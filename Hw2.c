@@ -4,7 +4,7 @@
 
 int main(void)
 {
-
+	int a=0,b=3;
 	puts("大眼仔");
 	puts("..............::^7JY5PGGBBG55555555PPPPPPGGGPY!:..");
 	puts(".............:^~~7JY5PGG#BB555555PPPPPPPPPYJ!^....");
