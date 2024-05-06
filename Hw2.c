@@ -109,7 +109,11 @@ int main(void)
 			}
 			if(ch=='c'||ch=='C')
 			{
-				printf("c");
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+				system("CLS"); // 清除螢幕
+				printf("'continue(y/n)'");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+				scanf("%c",&ans);
 			}
 		}
 		else if(a!=2024&&b>1)
