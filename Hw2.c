@@ -50,7 +50,10 @@ int main(void)
 			printf("|a. 畫出直角三角形                              |\n");
 			printf("|b. 顯示乘法表                                  |\n"); 
 			printf("|c. 結束                                        |\n"); 
-			printf("------------------------------------------------\n"); 
+			printf("------------------------------------------------\n");
+			printf("請輸入字元\n");
+			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+			scanf("%c",&ch); 
 		}
 		else if(a!=2024&&b>1)
 		{
