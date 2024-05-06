@@ -47,6 +47,17 @@ int main(void)
 		{
 			printf("a");
 		}
+		else if(a!=2024&&b>1)
+		{
+			b=b-1;
+			printf("輸入錯誤,還剩%d次機會",b);
+			scanf("%d",&a);
+		}
+		else
+		{
+			system("PAUSE");
+			return 0;
+		}
 	}
 	
 	
