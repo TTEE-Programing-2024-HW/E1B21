@@ -115,6 +115,12 @@ int main(void)
 				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 				scanf("%c",&ans);
 			}
+			while(ans!='y'&&ans!='Y'&&ans!='N'&&ans!='n')
+				{
+					printf("輸入錯誤請重打");
+					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+					scanf("%c",&ans);
+				}
 		}
 		else if(a!=2024&&b>1)
 		{
