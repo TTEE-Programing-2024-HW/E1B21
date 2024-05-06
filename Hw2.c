@@ -4,7 +4,8 @@
 
 int main(void)
 {
-	int a=0,b=3;
+	int a=0,b=3,c=0,d=0,e=0,f=0;
+	char ch,ab,i,j,k,ans;
 	puts("大眼仔");
 	puts("..............::^7JY5PGGBBG55555555PPPPPPGGGPY!:..");
 	puts(".............:^~~7JY5PGG#BB555555PPPPPPPPPYJ!^....");
@@ -53,7 +54,19 @@ int main(void)
 			printf("------------------------------------------------\n");
 			printf("請輸入字元\n");
 			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
-			scanf("%c",&ch); 
+			scanf("%c",&ch);
+			if(ch=='a'||ch=='A')
+			{
+				printf("a");
+			} 
+			if(ch=='b'||ch=='B')
+			{
+				printf("b");
+			}
+			if(ch=='c'||ch=='C')
+			{
+				printf("c");
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
