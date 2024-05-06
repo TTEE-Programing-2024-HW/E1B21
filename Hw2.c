@@ -67,7 +67,21 @@ int main(void)
 					printf("輸入錯誤請重打");
 					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 					scanf("%c",&ab);
-				}
+				}	
+					if(ab>='a' && ab<='n')
+					{
+						for(i='a';i<=ab;i++) //控制有幾行
+						{	
+							for(j=ab-c;j>='a';j--) //控制美行有幾個空個
+							printf(" ");
+							for(k=ab-c;k<=ab;k++) //控制每行要輸出的文字母
+							printf("%c",k);
+					    	c=c+1;	
+					    	printf("\n");
+						}
+					system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+					system("CLS"); // 清除螢幕
+					}
 			} 
 			if(ch=='b'||ch=='B')
 			{
