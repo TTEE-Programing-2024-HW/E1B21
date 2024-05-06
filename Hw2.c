@@ -85,7 +85,11 @@ int main(void)
 			} 
 			if(ch=='b'||ch=='B')
 			{
-				printf("b");
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+				system("CLS"); // 清除螢幕
+				printf("請輸入一個1到9的數字");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+				scanf("%d",&d);
 			}
 			if(ch=='c'||ch=='C')
 			{
