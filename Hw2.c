@@ -114,13 +114,23 @@ int main(void)
 				printf("'continue(y/n)'");
 				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 				scanf("%c",&ans);
-			}
+			
 			while(ans!='y'&&ans!='Y'&&ans!='N'&&ans!='n')
 				{
 					printf("輸入錯誤請重打");
 					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 					scanf("%c",&ans);
 				}
+				if(ans=='y'||ans=='Y')
+				{
+					continue; //回到主選單
+				}
+				if(ans=='n'||ans=='N')
+				{
+					system("pause");
+					return 0; //結束
+				}	
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
