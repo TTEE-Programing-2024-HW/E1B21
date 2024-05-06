@@ -57,7 +57,17 @@ int main(void)
 			scanf("%c",&ch);
 			if(ch=='a'||ch=='A')
 			{
-				printf("a");
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+				system("CLS"); // 清除螢幕
+				printf("請輸入a到n一個英文字母");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+				scanf("%c",&ab);
+				while(ab<'a'||ab>'n')
+				{
+					printf("輸入錯誤請重打");
+					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+					scanf("%c",&ab);
+				}
 			} 
 			if(ch=='b'||ch=='B')
 			{
