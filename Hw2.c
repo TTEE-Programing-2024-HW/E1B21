@@ -90,6 +90,12 @@ int main(void)
 				printf("請輸入一個1到9的數字");
 				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 				scanf("%d",&d);
+				while(d<1||d>9)
+				{
+					printf("輸入錯誤請重打");
+					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+					scanf("%d",&d);
+				}
 			}
 			if(ch=='c'||ch=='C')
 			{
