@@ -96,6 +96,16 @@ int main(void)
 					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 					scanf("%d",&d);
 				}
+				for(e=1;e<=d;e++)
+				{
+					for(f=1;f<=d;f++)
+					{
+						printf("%d*%d=%2d ",e,f,e*f);  //利用巢狀迴圈印出乘法表
+					}
+					printf("\n");
+				}
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+				system("CLS"); // 清除螢幕
 			}
 			if(ch=='c'||ch=='C')
 			{
