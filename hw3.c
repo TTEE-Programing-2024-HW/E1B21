@@ -58,6 +58,31 @@ int main(void)
 			printf("|c. Choose by yourself                          |\n"); 
 			printf("|d. Exit                                        |\n");
 			printf("------------------------------------------------\n"); 
+			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+			scanf("%c",&ch);
+			if(ch=='a'||ch=='A')
+			{
+				while (d<10) 
+					{
+	        			i=rand()%9; // 隨機選擇一行
+	        			j=rand()%9; // 隨機選擇一列
+	
+	        			if (sit[i][j]=='-') // 確保該位置尚未被選擇
+						{
+	        		    	sit[i][j]='*';
+	        		    	d++;
+	        			}
+	   				}
+					for(i=0;i<=8;i++)
+					{
+						for(j=0;j<=8;j++)
+						{
+							printf("%c",sit[i][j]); //印出座位表
+						}
+						printf("\n");
+					}
+					d=0;
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
