@@ -251,6 +251,37 @@ int main(void)
 					}
 					sit[s1-1][s3-1]='@';
 				}
+				while (d<10) 
+				{
+        			i=rand()%9; // 隨機選擇一行
+        			j=rand()%9; // 隨機選擇一列
+        			if(sit[i][j]=='-') // 確保該位置尚未被選擇
+					{
+        		   		sit[i][j]='*';
+        				d++;
+       				}
+				}
+				d=0;
+				for(i=0;i<=8;i++)
+				{
+					for(j=0;j<=8;j++)
+					{
+						printf("%c",sit[i][j]); //印出座位表
+					}
+					printf("\n");
+				}
+				printf("是否滿意(y/n)");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+				scanf("%s",&ans);
+				if(ans=='y')
+				{
+					sits=0;
+				}
+				if(ans=='n')
+				{
+					sits=1;
+				}
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。		
 			}
 			
 		}
