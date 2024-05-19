@@ -243,7 +243,7 @@ int main(void)
 					{
 						break;
 					}
-					while(s1<1||s1>9||s2!='-'||s3>9||s3<1) //若輸入錯誤則重打
+					while(s1<1||s1>9||s2!='-'||s3>9||s3<1||sit[s1-1][s3-1]=='@') //若輸入錯誤則重打
 					{
 						printf("輸入錯誤請重打");
 						fflush(stdin); // 使input buffer淨空，常放在scanf()前
