@@ -41,4 +41,23 @@ int main(void)
 	system("CLS"); // 清除螢幕
 	printf("請輸入密碼");
 	scanf("%d",&a);
+	while(1)
+	{
+		z-=1;
+		if(a==2024)
+		{
+			if(z==0)
+			{
+				printf("輸入正確");
+				sleep(1); // 等待一秒
+			}
+			system("CLS"); // 清除螢幕
+			printf("------------------------------------------------\n");
+			printf("|a. Available seats                             |\n");
+			printf("|b. Arrange for you                             |\n"); 
+			printf("|c. Choose by yourself                          |\n"); 
+			printf("|d. Exit                                        |\n");
+			printf("------------------------------------------------\n"); 
+		}
+	}
 }
