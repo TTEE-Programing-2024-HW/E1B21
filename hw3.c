@@ -226,6 +226,33 @@ int main(void)
 				}
 				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
+			if(ch=='c'||ch=='C')
+			{
+				for(i=0;i<=8;i++)
+				{
+					for(j=0;j<=8;j++)
+					{
+						sit[i][j]='-';
+					}
+				}
+				printf("請輸入想要的座位,若輸入0-0則結束輸入\n");
+				while(1)
+				{
+					scanf("%d%c%d",&s1,&s2,&s3);
+					if(s1==0&&s2=='-'&&s3==0) //輸入0-0則結束
+					{
+						break;
+					}
+					while(s1<1||s1>9||s2!='-'||s3>9||s3<1) //若輸入錯誤則重打
+					{
+						printf("輸入錯誤請重打");
+						fflush(stdin); // 使input buffer淨空，常放在scanf()前
+						scanf("%d%c%d",&s1,&s2,&s3);
+					}
+					sit[s1-1][s3-1]='@';
+				}
+			}
+			
 		}
 		else if(a!=2024&&b>1)
 		{
