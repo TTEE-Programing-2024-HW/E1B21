@@ -62,7 +62,36 @@ int main(void)
 			scanf("%c",&ch);
 			if(ch=='a'||ch=='A')
 			{
-				while (d<10) 
+				if(sits==0)
+				{
+					for(i=0;i<=8;i++)
+					{
+						for(j=0;j<=8;j++)
+						{
+							if(sit[i][j]=='@')
+							sit[i][j]='*';
+						}
+					}
+					for(i=0;i<=8;i++)
+					{
+						for(j=0;j<=8;j++)
+						{
+							printf("%c",sit[i][j]); //印出座位表
+						}
+						printf("\n");
+					}
+					system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+				}
+				if(sits==1)
+				{
+					for(i=0;i<=8;i++)
+					{
+						for(j=0;j<=8;j++)
+						{
+							sit[i][j]='-';
+						}
+					}
+					while (d<10) 
 					{
 	        			i=rand()%9; // 隨機選擇一行
 	        			j=rand()%9; // 隨機選擇一列
@@ -90,6 +119,7 @@ int main(void)
 						}
 					}
 					system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+				}	
 			}
 			if(ch=='b'||ch=='B')
 			{
@@ -188,7 +218,11 @@ int main(void)
 				scanf("%s",&ans);
 				if(ans=='y')
 				{
-					//儲存
+					sits=0;
+				}
+				if(ans=='n')
+				{
+					sits=1;
 				}
 				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
