@@ -59,5 +59,12 @@ int main(void)
 			printf("|d. Exit                                        |\n");
 			printf("------------------------------------------------\n"); 
 		}
+		else if(a!=2024&&b>1)
+		{
+			b=b-1;
+			printf("輸入錯誤,還剩%d次機會\n",b);
+			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+			scanf("%d",&a);
+		}
 	}
 }
