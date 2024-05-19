@@ -66,5 +66,11 @@ int main(void)
 			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 			scanf("%d",&a);
 		}
+		else
+		{
+			printf("沒機會囉\n");
+			system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+			return 0; //程式結束
+		}
 	}
 }
