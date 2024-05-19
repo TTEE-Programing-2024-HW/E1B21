@@ -108,18 +108,30 @@ int main(void)
 					printf("輸入錯誤請重打");
 					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 					scanf("%d",&e);
-				}			
-			}
-			for(i=0;i<=8;i++)
-				{
-					for(j=0;j<=8;j++)
-					{
-						sit[i][j]='-';
-					}
 				}
-				printf("請輸入要幾個位子(1~4)");
-				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
-				scanf("%d",&e);
+				if(e>=1&&e<=3)
+				{	
+					do {
+           				i = rand()%9;
+            			j = rand()%9;
+						}
+					 while ((e==3&&j>=7)||(e==2&&j>=8));
+        			for (int k = 0; k < e; k++) 
+					{
+            			sit[i][j + k] = '@';
+					}
+					while (d<10) 
+					{
+        				i=rand()%9; // 隨機選擇一行
+        				j=rand()%9; // 隨機選擇一列
+        				if (sit[i][j]=='-') // 確保該位置尚未被選擇
+						{
+        		   		 	sit[i][j]='*';
+        		    		d++;
+        				}
+   					}d=0;
+				}				
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
