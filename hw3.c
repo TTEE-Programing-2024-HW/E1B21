@@ -82,6 +82,14 @@ int main(void)
 						printf("\n");
 					}
 					d=0;
+					for(i=0;i<=8;i++)
+					{
+						for(j=0;j<=8;j++)
+						{
+							sit[i][j]='-';
+						}
+					}
+					system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
 		}
 		else if(a!=2024&&b>1)
