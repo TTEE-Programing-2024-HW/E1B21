@@ -174,7 +174,23 @@ int main(void)
    						}
 						d=0;	
 					}	
-				}			
+				}
+				for(i=0;i<=8;i++)
+				{
+					for(j=0;j<=8;j++)
+					{
+						printf("%c",sit[i][j]); //印出座位表
+					}
+					printf("\n");
+				}
+				printf("是否滿意(y/n)");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+				scanf("%s",&ans);
+				if(ans=='y')
+				{
+					//儲存
+				}
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
 		}
 		else if(a!=2024&&b>1)
@@ -191,4 +207,4 @@ int main(void)
 			return 0; //程式結束
 		}
 	}
-}
+}	
