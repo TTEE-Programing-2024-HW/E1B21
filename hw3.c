@@ -283,7 +283,24 @@ int main(void)
 				}
 				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。		
 			}
-			
+			if(ch=='d'||ch=='D')
+			{
+				printf("continue(y/n)");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前
+				scanf("%c",&cho);
+				while(cho!='y'&&cho!='n')
+				{
+					printf("輸入錯誤請重打");
+					fflush(stdin); // 使input buffer淨空，常放在scanf()前; 
+					scanf("%c",&cho);
+				}
+				if(cho=='n')
+				{
+					system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+					return 0; //程式結束
+				}
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
