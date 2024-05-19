@@ -102,7 +102,13 @@ int main(void)
 				}
 				printf("請輸入要幾個位子(1~4)");
 				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
-				scanf("%d",&e);				
+				scanf("%d",&e);	
+				while(e!=1&&e!=2&&e!=3&&e!=4)
+				{
+					printf("輸入錯誤請重打");
+					fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+					scanf("%d",&e);
+				}			
 			}
 			for(i=0;i<=8;i++)
 				{
