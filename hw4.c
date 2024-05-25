@@ -12,6 +12,7 @@ struct data
 		int eng;
 		float avg;
 	};
+	
 void bubble(struct data *stu,int n)
 {
 	int i,j;
