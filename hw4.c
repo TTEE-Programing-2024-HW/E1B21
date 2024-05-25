@@ -49,4 +49,40 @@ int main(void)
 	system("CLS"); // 清除螢幕
 	printf("請輸入密碼");
 	scanf("%d",&a);
+	while(1)
+	{
+		z-=1;
+		if(a==2024)
+		{
+			if(z==0)
+			{
+				printf("輸入正確");
+				sleep(1); // 等待一秒
+			}
+			system("CLS"); // 清除螢幕
+		}
+		else if(a!=2024&&b>1)
+		{
+			b=b-1;
+			printf("輸入錯誤,還剩%d次機會\n",b);
+			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+			scanf("%d",&a);
+		}
+		else
+		{
+			printf("沒機會囉\n");
+			system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+			return 0; //程式結束
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
