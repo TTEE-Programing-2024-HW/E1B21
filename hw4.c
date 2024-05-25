@@ -12,6 +12,23 @@ struct data
 		int eng;
 		float avg;
 	};
+void bubble(struct data *stu,int n)
+{
+	int i,j;
+	struct data temp;
+	for(i=1;i<n;i++)
+	{
+		for(j=0;j<n-i;j++)
+		{
+			if(stu[j].avg>stu[j+1].avg)
+			{
+				temp=stu[j];
+				stu[j]=stu[j+1];
+				stu[j+1]=temp;
+			}
+		}
+	}
+}
 int main(void)
 {
 	struct data *student;
@@ -122,6 +139,17 @@ int main(void)
 				if(w==2)
 				{
 					printf("查無此人\n");
+				}
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+			}
+			if(ch=='d'||ch=='D')
+			{
+				system("CLS"); // 清除螢幕
+				bubble(student,n); //氣泡排序法
+				printf("名字\t學號\t平均\n");
+				for(i=n-1;i>=0;i--)
+				{
+					printf("%s\t%s\t%.1f\n",student[i].name,student[i].num,student[i].avg);
 				}
 				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
