@@ -69,6 +69,14 @@ int main(void)
 			printf("------------------------------------------------\n"); 
 			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 			scanf("%c",&ch);
+			if(ch=='a'||ch=='A')
+			{
+				system("CLS"); // 清除螢幕
+				printf("請輸入有幾個學生\n");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+				scanf("%d",&n);
+				student=(struct data *)malloc(n * sizeof(struct data));
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
