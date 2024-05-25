@@ -60,6 +60,15 @@ int main(void)
 				sleep(1); // 等待一秒
 			}
 			system("CLS"); // 清除螢幕
+			printf("------------------------------------------------\n");
+			printf("|a. Enter student grades                         |\n");
+			printf("|b. Display student grades                       |\n"); 
+			printf("|c. arch for student grad                        |\n"); 
+			printf("|d. Grade ranking                                |\n");
+			printf("|e. Exit system                                  |\n");
+			printf("------------------------------------------------\n"); 
+			fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+			scanf("%c",&ch);
 		}
 		else if(a!=2024&&b>1)
 		{
