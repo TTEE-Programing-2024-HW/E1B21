@@ -92,6 +92,17 @@ int main(void)
 				}
 				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
+			if(ch=='b'||ch=='B')
+			{
+				system("CLS"); // 清除螢幕
+				printf("名字\t學號\t數學成績\t物理成績\t英文成績\t平均\n");
+				for(i=0;i<n;i++)
+				{
+					student[i].avg=(student[i].math+student[i].phy+student[i].eng)/3.0; //算出平均值
+					printf("%s\t%s\t%d\t\t%d\t\t%d\t\t%.1f\n",student[i].name,student[i].num,student[i].math,student[i].phy,student[i].eng,student[i].avg);
+				}	
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
