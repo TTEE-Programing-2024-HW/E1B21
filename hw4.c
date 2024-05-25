@@ -76,6 +76,21 @@ int main(void)
 				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 				scanf("%d",&n);
 				student=(struct data *)malloc(n * sizeof(struct data));
+				for(i=0;i<n;i++)
+				{	
+					printf("請輸入第%d個學生的資料(依序從姓名 座號 數學成績 物理成績 英文成績)",i+1);
+					scanf("%s %s %d %d %d",student[i].name,student[i].num,&student[i].math,&student[i].phy,&student[i].eng);
+					while(strlen(student[i].num)!=6||student[i].math<0||student[i].math>100||student[i].phy<0||student[i].phy>100||student[i].eng<0||student[i].eng>100)
+					{
+						if(strlen(student[i].num)!=6) //學號是否六位數
+						printf("學號要6位數請重打\n");
+						if(student[i].math<0||student[i].math>100||student[i].phy<0||student[i].phy>100||student[i].eng<0||student[i].eng>100) //成績是否大於0小於100
+						printf("成績要1到100請重打");
+						fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+						scanf("%s %s %d %d %d",student[i].name,student[i].num,&student[i].math,&student[i].phy,&student[i].eng);
+					}	
+				}
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
 		}
 		else if(a!=2024&&b>1)
