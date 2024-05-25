@@ -103,6 +103,13 @@ int main(void)
 				}	
 				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
+			if(ch=='c'||ch=='C')
+			{
+				system("CLS"); // 清除螢幕
+				printf("請輸入你要找的學生姓名");
+				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
+				scanf("%s",&nam);
+			}
 		}
 		else if(a!=2024&&b>1)
 		{
