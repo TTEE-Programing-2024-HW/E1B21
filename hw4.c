@@ -109,6 +109,21 @@ int main(void)
 				printf("請輸入你要找的學生姓名");
 				fflush(stdin); // 使input buffer淨空，常放在scanf()前;
 				scanf("%s",&nam);
+				w=2;
+				for(i=0;i<n;i++)
+				{
+					if(strcmp(nam,student[i].name)==0)
+					{
+						w=1;
+						printf("名字\t學號\t數學成績\t物理成績\t英文成績\t平均\n");
+						printf("%s\t%s\t%d\t\t%d\t\t%d\t\t%.1f\n",student[i].name,student[i].num,student[i].math,student[i].phy,student[i].eng,student[i].avg);
+					}
+				}
+				if(w==2)
+				{
+					printf("查無此人\n");
+				}
+				system("PAUSE"); // 螢幕畫面暫停，並等待使用者按任意鍵。
 			}
 		}
 		else if(a!=2024&&b>1)
